@@ -19,6 +19,9 @@ app.get('/secreturl', (req, res) => {
   res.send('This is a secret url with super top-secret content.');
 });
 
+// This implements express.static to serve all static files from the public folder, which is where they should be kept
+app.use(express.static('public'));
+
 app.listen(8080, () => {
   console.log('Your app is listening on port 8080.');
 });
