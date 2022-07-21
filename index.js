@@ -5,6 +5,33 @@ const express = require('express'),
 
 const app = express();
 
+let composers = [
+  {
+    name: 'Iannis Xenakis'
+  },
+  {
+    name: 'John Cage'
+  },
+  {
+    name: 'Pierre Boulez'
+  },
+  {
+    name: 'Luigi Nono'
+  },
+  {
+    name: 'Karlheinz Stockhausen'
+  },
+  {
+    name: 'Morton Feldman'
+  },
+  {
+    name: 'Luciano Berio'
+  },
+  {
+    name: 'György Ligeti'
+  },
+];
+
 // this line creates a write stream (in append mode) and a ‘log.txt’ file in root directory
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { flags: 'a' })
 
@@ -12,11 +39,11 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { 
 app.use(morgan('combined', { stream: accessLogStream }));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to my app!');
+  res.send('Welcome to Greg\'s avant garde music app!');
 });
 
-app.get('/secreturl', (req, res) => {
-  res.send('This is a secret url with super top-secret content.');
+app.get('/composers', (req, res) => {
+  res.json(composers);
 });
 
 // This implements express.static to serve all static files from the public folder, which is where they should be kept
