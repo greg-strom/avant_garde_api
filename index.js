@@ -7,28 +7,36 @@ const app = express();
 
 let composers = [
   {
-    name: 'Iannis Xenakis'
+    givenname: 'Iannis',
+    surname: 'Xenakis'
   },
   {
-    name: 'John Cage'
+    givenname: 'John',
+    surname: 'Cage'
   },
   {
-    name: 'Pierre Boulez'
+    givenname: 'Pierre',
+    surname: 'Boulez'
   },
   {
-    name: 'Luigi Nono'
+    givenname: 'Luigi',
+    surname: 'Nono'
   },
   {
-    name: 'Karlheinz Stockhausen'
+    givenname: 'Karlheinz',
+    surname: 'Stockhausen'
   },
   {
-    name: 'Morton Feldman'
+    givenname: 'Morton',
+    surname: 'Feldman'
   },
   {
-    name: 'Luciano Berio'
+    givenname: 'Luciano',
+    surname: 'Berio'
   },
   {
-    name: 'György Ligeti'
+    givenname: 'György',
+    surname: 'Ligeti'
   },
 ];
 

@@ -31,3 +31,7 @@ Timestamp: Thu Jul 21 2022 13:52:14 GMT-0400 (Eastern Daylight Time)
 ::ffff:127.0.0.1 - - [21/Jul/2022:19:34:52 +0000] "GET /composers HTTP/1.1" 200 205 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
 ::ffff:127.0.0.1 - - [21/Jul/2022:19:35:46 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
 ::ffff:127.0.0.1 - - [21/Jul/2022:19:36:14 +0000] "GET / HTTP/1.1" 200 40 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jul/2022:19:38:14 +0000] "GET /documentation.html HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jul/2022:19:39:32 +0000] "GET /documentation.html HTTP/1.1" 200 220 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [23/Jul/2022:13:00:21 +0000] "GET /composers HTTP/1.1" 200 341 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+::1 - - [23/Jul/2022:13:00:21 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8080/composers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
