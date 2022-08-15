@@ -15,6 +15,9 @@ const express = require('express'),
 
 const app = express();
 
+const cors = require('cors');
+app.use(cors());
+
 // this line creates a write stream (in append mode) and a ‘log.txt’ file in root directory
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { flags: 'a' })
 
