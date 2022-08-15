@@ -77,7 +77,6 @@ app.get('/pieces/:pieceID/recordings', (req, res) => {
 });
 
 // Get all discs that have any recording of a given piece
-
 app.get('/pieces/:pieceID/discs', (req, res) => {
   Discs.find({ pieces: req.params.pieceID }).populate('recordings')
     .then((Discs) => {
@@ -89,8 +88,6 @@ app.get('/pieces/:pieceID/discs', (req, res) => {
       res.status(500).send('Error: ' + err);
     })
 });
-// //Discs.find({ })
-
 
 // Get all CDs
 app.get('/discs', (req, res) => {
@@ -163,10 +160,6 @@ app.get('/recordings/:recordingID/discs', (req, res) => {
       res.status(500).send("Error: " + err);
     });
 });
-
-
-
-
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
