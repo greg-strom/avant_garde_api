@@ -167,7 +167,7 @@ app.get('/discs/:DiscID', (req, res) => {
     });
 });
 
-// Get all discs that have a given recording of a given piece
+// Get all discs that have a given recording of a given piece....
 app.get('/recordings/:recordingID/discs', (req, res) => {
   Discs.find({ recordings: req.params.recordingID })
     .then((Disc) => {
