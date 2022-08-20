@@ -109,7 +109,7 @@ app.get('/pieces/:pieceID/discs', (req, res) => {
 
 // Get all CDs
 app.get('/discs', (req, res) => {
-  Discs.find()
+  Discs.find().populate('recordings')
     .then((Discs) => {
       res.status(201).json(Discs);
     })
