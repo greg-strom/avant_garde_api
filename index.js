@@ -6,7 +6,7 @@ const Pieces = Models.Piece;
 const Recordings = Models.Recording;
 const Discs = Models.Disc;
 
-//mongoose.connect('mongodb://localhost:27017/agdb', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/agdb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -157,7 +157,7 @@ app.get('/recordings/:recordingID', (req, res) => {
 
 // Get a CD by ID
 app.get('/discs/:DiscID', (req, res) => {
-  Discs.findOne({ _id: req.params.DiscID })
+  Discs.findOne({ _id: req.params.DiscID }).populate({ path: 'recordings', populate: { path: 'composer piece' } })
     .then((Disc) => {
       res.json(Disc);
     })
